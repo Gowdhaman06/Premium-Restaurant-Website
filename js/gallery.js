@@ -140,10 +140,10 @@ window.initGallery = function() {
   // Bind navigation listeners
   if (filtersWrapper) {
     filtersWrapper.querySelectorAll('.filter-pill').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        activeCategory = e.target.getAttribute('data-category');
+      btn.addEventListener('click', () => {
+        activeCategory = btn.getAttribute('data-category');
         filtersWrapper.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-        e.target.classList.add('active');
+        btn.classList.add('active');
         renderGallery();
       });
     });
