@@ -1,32 +1,31 @@
 // js/animations.js
 window.initAnimations = function() {
-  const getObservedElements = () => document.querySelectorAll('.animate-on-scroll');
-
-  const observeElements = () => {
-    const elements = getObservedElements();
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-          // Once animated, stop observing this item
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      root: null,
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px"
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        // Once animated, stop observing this item
+        observer.unobserve(entry.target);
+      }
     });
+  }, {
+    root: null,
+    threshold: 0.05,
+    rootMargin: "0px 0px -20px 0px"
+  });
 
-    elements.forEach(el => observer.observe(el));
+  // Global function to observe newly added dynamic elements
+  window.observeElements = function() {
+    document.querySelectorAll('.animate-on-scroll:not(.animated)').forEach(el => {
+      observer.observe(el);
+    });
   };
 
-  // Run on initial load
-  observeElements();
+  // Run initial observation pass
+  window.observeElements();
 
-  // Listen to hash changes or DOM updates to re-observe elements
+  // Listen to hash changes to trigger observation
   window.addEventListener('hashchange', () => {
-    setTimeout(observeElements, 100);
+    setTimeout(window.observeElements, 100);
   });
 };

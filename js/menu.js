@@ -98,6 +98,7 @@ window.initMenu = function() {
     if (!menuGrid) return;
     
     if (items.length === 0) {
+      menuGrid.style.display = 'grid';
       menuGrid.innerHTML = `
         <div class="flex-center text-center py-16 w-full" style="grid-column: 1 / -1;">
           <p class="text-gray text-lg">No exceptional dishes match your query.</p>
@@ -106,9 +107,44 @@ window.initMenu = function() {
       return;
     }
 
-    menuGrid.innerHTML = items.map(createDishCardHTML).join('');
+    // Group menu items by category on "All Courses" selection (when search is empty)
+    if (activeCategory === 'all' && !searchQuery) {
+      let html = '';
+      
+      categories.forEach(cat => {
+        if (cat.id === 'all') return;
+        
+        const catItems = items.filter(item => item.category === cat.id);
+        if (catItems.length === 0) return;
+        
+        html += `
+          <div class="menu-category-section mb-12 animate-on-scroll" style="grid-column: 1 / -1; width: 100%;">
+            <div class="flex-center items-center mb-8" style="display: flex; align-items: center; justify-content: center; width: 100%; margin-bottom: 32px;">
+              <div class="line-decor" style="flex-grow: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.3), transparent);"></div>
+              <h2 class="font-serif text-2xl text-gold uppercase tracking-widest px-6 text-center" style="font-family: var(--font-serif); color: var(--color-gold); font-size: 24px; letter-spacing: 4px; white-space: nowrap;">${cat.name}</h2>
+              <div class="line-decor" style="flex-grow: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.3), transparent);"></div>
+            </div>
+            <div class="cards-grid">
+              ${catItems.map(createDishCardHTML).join('')}
+            </div>
+          </div>
+        `;
+      });
+      
+      menuGrid.innerHTML = html;
+      menuGrid.style.display = 'block';
+    } else {
+      // Individual category filter or active search filters
+      menuGrid.style.display = 'grid';
+      menuGrid.innerHTML = items.map(createDishCardHTML).join('');
+    }
     
-    // Dispatch scroll event to trigger viewport animations
+    // Bind newly injected items to animation observer
+    if (typeof window.observeElements === 'function') {
+      window.observeElements();
+    }
+    
+    // Dispatch scroll event to force observer check
     window.dispatchEvent(new Event('scroll'));
   };
 
