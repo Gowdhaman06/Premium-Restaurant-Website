@@ -1,5 +1,5 @@
 // js/animations.js
-export function initAnimations() {
+window.initAnimations = function() {
   const getObservedElements = () => document.querySelectorAll('.animate-on-scroll');
 
   const observeElements = () => {
@@ -29,4 +29,4 @@ export function initAnimations() {
   window.addEventListener('hashchange', () => {
     setTimeout(observeElements, 100);
   });
-}
+};

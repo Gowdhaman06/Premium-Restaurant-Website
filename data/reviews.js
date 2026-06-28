@@ -1,5 +1,5 @@
 // data/reviews.js
-export const reviews = [
+window.reviews = [
   {
     id: "rev-1",
     customer: "Alexander Thorne",

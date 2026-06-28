@@ -1,7 +1,5 @@
 // js/carousel.js
-import { reviews } from '../data/reviews.js';
-
-export function initCarousel() {
+window.initCarousel = function() {
   const slider = document.querySelector('.reviews-slider');
   const prevBtn = document.querySelector('.prev-review');
   const nextBtn = document.querySelector('.next-review');
@@ -13,7 +11,10 @@ export function initCarousel() {
 
   // Render Reviews Slides
   const renderSlides = () => {
-    slider.innerHTML = reviews.map((rev, index) => `
+    const list = window.reviews || [];
+    if (list.length === 0) return;
+
+    slider.innerHTML = list.map((rev, index) => `
       <div class="review-slide ${index === 0 ? 'active' : ''}" data-index="${index}">
         <p class="text-white font-serif text-lg md:text-xl italic mb-6 leading-relaxed">
           "${rev.review}"
@@ -70,4 +71,4 @@ export function initCarousel() {
   // Initialize
   renderSlides();
   startAutoplay();
-}
+};

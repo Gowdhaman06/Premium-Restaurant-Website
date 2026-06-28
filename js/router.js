@@ -1,15 +1,15 @@
 // js/router.js
-const routes = {
-  '': 'view-home',
-  '#home': 'view-home',
-  '#about': 'view-about',
-  '#menu': 'view-menu',
-  '#gallery': 'view-gallery',
-  '#reservations': 'view-reservations',
-  '#contact': 'view-contact'
-};
+window.initRouter = function() {
+  const routes = {
+    '': 'view-home',
+    '#home': 'view-home',
+    '#about': 'view-about',
+    '#menu': 'view-menu',
+    '#gallery': 'view-gallery',
+    '#reservations': 'view-reservations',
+    '#contact': 'view-contact'
+  };
 
-export function initRouter() {
   const handleRouteChange = () => {
     const hash = window.location.hash;
     const viewId = routes[hash];
@@ -60,4 +60,4 @@ export function initRouter() {
   
   // Initial page load trigger
   handleRouteChange();
-}
+};

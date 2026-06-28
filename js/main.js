@@ -1,21 +1,13 @@
 // js/main.js
-import { initRouter } from './router.js';
-import { initNavbar } from './navbar.js';
-import { initMenu } from './menu.js';
-import { initGallery } from './gallery.js';
-import { initReservations } from './reservations.js';
-import { initCarousel } from './carousel.js';
-import { initAnimations } from './animations.js';
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Core Component States
-  initNavbar();
-  initRouter();
-  initMenu();
-  initGallery();
-  initReservations();
-  initCarousel();
-  initAnimations();
+  // Initialize Core Component States via global bindings
+  if (typeof window.initNavbar === 'function') window.initNavbar();
+  if (typeof window.initRouter === 'function') window.initRouter();
+  if (typeof window.initMenu === 'function') window.initMenu();
+  if (typeof window.initGallery === 'function') window.initGallery();
+  if (typeof window.initReservations === 'function') window.initReservations();
+  if (typeof window.initCarousel === 'function') window.initCarousel();
+  if (typeof window.initAnimations === 'function') window.initAnimations();
 
   // Initialize Lucide SVG Icons globally
   if (window.lucide) {

@@ -1,7 +1,5 @@
 // js/menu.js
-import { menuItems } from '../data/menu.js';
-
-export function initMenu() {
+window.initMenu = function() {
   const menuGrid = document.getElementById('menu-dishes-grid');
   const featuredGrid = document.getElementById('featured-dishes-grid');
   const popularGrid = document.getElementById('popular-highlights');
@@ -58,13 +56,18 @@ export function initMenu() {
 
   // Render Homepage Featured Content
   const renderHomeFeatured = () => {
-    if (!featuredGrid || !popularGrid) return;
+    const items = window.menuItems || [];
+    if (items.length === 0) return;
 
-    const featuredItems = menuItems.filter(item => item.featured).slice(0, 3);
-    const popularItems = [...menuItems].sort((a, b) => b.rating - a.rating).slice(0, 3);
+    if (featuredGrid) {
+      const featuredItems = items.filter(item => item.featured).slice(0, 3);
+      featuredGrid.innerHTML = featuredItems.map(createDishCardHTML).join('');
+    }
 
-    featuredGrid.innerHTML = featuredItems.map(createDishCardHTML).join('');
-    popularGrid.innerHTML = popularItems.map(createDishCardHTML).join('');
+    if (popularGrid) {
+      const popularItems = [...items].sort((a, b) => b.rating - a.rating).slice(0, 3);
+      popularGrid.innerHTML = popularItems.map(createDishCardHTML).join('');
+    }
   };
 
   // Render Filters in Menu View
@@ -96,7 +99,7 @@ export function initMenu() {
     
     if (items.length === 0) {
       menuGrid.innerHTML = `
-        <div class="flex-col text-center py-16 w-full" style="grid-column: 1 / -1;">
+        <div class="flex-center text-center py-16 w-full" style="grid-column: 1 / -1;">
           <p class="text-gray text-lg">No exceptional dishes match your query.</p>
         </div>
       `;
@@ -111,7 +114,7 @@ export function initMenu() {
 
   // Apply filters, searches, and sorting
   const applyFiltersAndSort = () => {
-    let filtered = menuItems;
+    let filtered = [...(window.menuItems || [])];
 
     // Filter by Category
     if (activeCategory !== 'all') {
@@ -158,4 +161,4 @@ export function initMenu() {
   renderHomeFeatured();
   renderCategoryFilters();
   applyFiltersAndSort();
-}
+};

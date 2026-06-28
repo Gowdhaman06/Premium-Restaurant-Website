@@ -1,62 +1,62 @@
 // js/gallery.js
-const galleryImages = [
-  {
-    id: "g-1",
-    category: "food",
-    title: "Oscietra Caviar Selection",
-    src: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=800"
-  },
-  {
-    id: "g-2",
-    category: "interior",
-    title: "The Golden Parlor",
-    src: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=800"
-  },
-  {
-    id: "g-3",
-    category: "kitchen",
-    title: "Culinary Flame Dressing",
-    src: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800"
-  },
-  {
-    id: "g-4",
-    category: "food",
-    title: "Truffle Filet Mignon Plating",
-    src: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800"
-  },
-  {
-    id: "g-5",
-    category: "interior",
-    title: "Chefs Table Experience",
-    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800"
-  },
-  {
-    id: "g-6",
-    category: "kitchen",
-    title: "Sauté Master Line",
-    src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800"
-  },
-  {
-    id: "g-7",
-    category: "food",
-    title: "Poached Maine Lobster tail",
-    src: "https://images.unsplash.com/photo-1559742811-82428df76d23?q=80&w=800"
-  },
-  {
-    id: "g-8",
-    category: "interior",
-    title: "Exquisite Table Settings",
-    src: "https://images.unsplash.com/photo-1525648122249-c7ef12e35159?q=80&w=800"
-  },
-  {
-    id: "g-9",
-    category: "food",
-    title: "Artisanal Grand Soufflé",
-    src: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800"
-  }
-];
+window.initGallery = function() {
+  const galleryImages = [
+    {
+      id: "g-1",
+      category: "food",
+      title: "Oscietra Caviar Selection",
+      src: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=800"
+    },
+    {
+      id: "g-2",
+      category: "interior",
+      title: "The Golden Parlor",
+      src: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=800"
+    },
+    {
+      id: "g-3",
+      category: "kitchen",
+      title: "Culinary Flame Dressing",
+      src: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800"
+    },
+    {
+      id: "g-4",
+      category: "food",
+      title: "Truffle Filet Mignon Plating",
+      src: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800"
+    },
+    {
+      id: "g-5",
+      category: "interior",
+      title: "Chefs Table Experience",
+      src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800"
+    },
+    {
+      id: "g-6",
+      category: "kitchen",
+      title: "Sauté Master Line",
+      src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800"
+    },
+    {
+      id: "g-7",
+      category: "food",
+      title: "Poached Maine Lobster tail",
+      src: "https://images.unsplash.com/photo-1559742811-82428df76d23?q=80&w=800"
+    },
+    {
+      id: "g-8",
+      category: "interior",
+      title: "Exquisite Table Settings",
+      src: "https://images.unsplash.com/photo-1525648122249-c7ef12e35159?q=80&w=800"
+    },
+    {
+      id: "g-9",
+      category: "food",
+      title: "Artisanal Grand Soufflé",
+      src: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800"
+    }
+  ];
 
-export function initGallery() {
   const masonryGrid = document.getElementById('gallery-masonry');
   const filtersWrapper = document.getElementById('gallery-filters-wrapper');
   const lightbox = document.getElementById('gallery-lightbox');
@@ -169,4 +169,4 @@ export function initGallery() {
   });
 
   renderGallery();
-}
+};

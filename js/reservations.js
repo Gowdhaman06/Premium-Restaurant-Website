@@ -1,5 +1,5 @@
 // js/reservations.js
-export function initReservations() {
+window.initReservations = function() {
   const form = document.getElementById('reservation-form');
   const modal = document.getElementById('booking-modal');
   const closeModalBtn = document.getElementById('close-modal-btn');
@@ -160,4 +160,4 @@ export function initReservations() {
       modal.setAttribute('aria-hidden', 'true');
     }
   });
-}
+};

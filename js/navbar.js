@@ -1,5 +1,5 @@
 // js/navbar.js
-export function initNavbar() {
+window.initNavbar = function() {
   const header = document.querySelector('.site-header');
   const toggle = document.querySelector('.menu-toggle');
   const drawer = document.querySelector('.mobile-drawer');
@@ -23,7 +23,7 @@ export function initNavbar() {
   });
 
   // Back to top scroll execution
-  backToTopBtn.addEventListener('click', () => {
+  backToTopBtn?.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -53,7 +53,7 @@ export function initNavbar() {
     toggle.focus();
   };
 
-  toggle.addEventListener('click', () => {
+  toggle?.addEventListener('click', () => {
     const isOpen = drawer.classList.contains('open');
     if (isOpen) {
       closeDrawer();
@@ -62,18 +62,18 @@ export function initNavbar() {
     }
   });
 
-  closeBtn.addEventListener('click', closeDrawer);
+  closeBtn?.addEventListener('click', closeDrawer);
   drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
 
   // Escape key closes mobile menu
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+    if (e.key === 'Escape' && drawer?.classList.contains('open')) {
       closeDrawer();
     }
   });
 
   // Focus trap implementation
-  drawer.addEventListener('keydown', (e) => {
+  drawer?.addEventListener('keydown', (e) => {
     if (e.key !== 'Tab') return;
     
     const focusableEls = drawer.querySelectorAll('a, button');
@@ -92,4 +92,4 @@ export function initNavbar() {
       }
     }
   });
-}
+};

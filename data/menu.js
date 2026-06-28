@@ -1,5 +1,5 @@
 // data/menu.js
-export const menuItems = [
+window.menuItems = [
   {
     id: "star-1",
     name: "Oscietra Caviar Reserve",
