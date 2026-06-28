@@ -1,0 +1,235 @@
+/* css/gallery.css */
+/* Gallery Pinterest-style Masonry Grid */
+.gallery-grid {
+  columns: 3;
+  column-gap: 24px;
+}
+@media (max-width: 992px) {
+  .gallery-grid {
+    columns: 2;
+  }
+}
+@media (max-width: 576px) {
+  .gallery-grid {
+    columns: 1;
+  }
+}
+
+.gallery-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 24px;
+  background-color: var(--color-black-light);
+  border: var(--border-white-5);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  border-color: rgba(214, 175, 55, 0.3);
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.04);
+}
+
+.gallery-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 11, 11, 0.7);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+.gallery-item:hover .gallery-hover-overlay {
+  opacity: 1;
+}
+
+.gallery-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.gallery-category {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-gold);
+}
+
+/* Lightbox Modal */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(7, 7, 7, 0.98);
+  z-index: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: var(--blur-premium);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 44px;
+  color: var(--color-white);
+  cursor: pointer;
+  z-index: 510;
+  transition: var(--transition-fast);
+}
+.lightbox-close:hover {
+  color: var(--color-gold);
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.05);
+  border: var(--border-white-10);
+  color: var(--color-white);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 510;
+  transition: var(--transition-fast);
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background: rgba(214, 175, 55, 0.1);
+}
+
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+
+@media (max-width: 768px) {
+  .lightbox-prev, .lightbox-next {
+    width: 44px;
+    height: 44px;
+  }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+}
+
+.lightbox-content {
+  max-width: 80%;
+  max-height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transform: scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox.open .lightbox-content {
+  transform: scale(1);
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border: var(--border-white-5);
+}
+
+.lightbox-caption {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+/* Reviews slider animations */
+.reviews-carousel-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  padding: 60px 40px;
+  background-color: var(--color-black-light);
+  border: var(--border-white-5);
+  border-radius: 2px;
+}
+
+.reviews-slider {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.review-slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.carousel-btn {
+  background: none;
+  border: var(--border-white-10);
+  color: var(--color-white);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.carousel-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}

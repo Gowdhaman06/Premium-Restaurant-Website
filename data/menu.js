@@ -1,0 +1,135 @@
+// data/menu.js
+export const menuItems = [
+  {
+    id: "star-1",
+    name: "Oscietra Caviar Reserve",
+    category: "starters",
+    description: "30g premium Oscietra caviar, toasted brioche points, traditional egg yolk mimosa, crème fraîche.",
+    price: 145.00,
+    featured: true,
+    vegetarian: false,
+    spicy: false,
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=600"
+  },
+  {
+    id: "star-2",
+    name: "Pan-Seared Foie Gras",
+    category: "starters",
+    description: "Artisanal Hudson Valley duck foie gras, caramelized figs, brioche crumbles, aged balsamic reduction.",
+    price: 34.00,
+    featured: false,
+    vegetarian: false,
+    spicy: false,
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600"
+  },
+  {
+    id: "main-1",
+    name: "Truffle Filet Mignon",
+    category: "main",
+    description: "8oz USDA Prime beef tenderloin, black winter truffle herb butter, roasted asparagus, red wine reduction.",
+    price: 68.00,
+    featured: true,
+    vegetarian: false,
+    spicy: false,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600"
+  },
+  {
+    id: "main-2",
+    name: "Pan-Roast Duck Breast",
+    category: "main",
+    description: "Crispy spiced maple glazed duck, sweet potato purée, braised endive, cherry-port demi-glace.",
+    price: 46.00,
+    featured: false,
+    vegetarian: false,
+    spicy: false,
+    rating: 4.7,
+    image: "https://images.unsplash.com/photo-1518492104633-130d0cc84637?q=80&w=600"
+  },
+  {
+    id: "sea-1",
+    name: "Glazed Chilean Sea Bass",
+    category: "seafood",
+    description: "Miso glazed wild sea bass, baby bok choy, ginger-lemongrass infusion, forbidden black rice.",
+    price: 54.00,
+    featured: true,
+    vegetarian: false,
+    spicy: false,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=600"
+  },
+  {
+    id: "sea-2",
+    name: "Maine Lobster Tail Duo",
+    category: "seafood",
+    description: "Two butter-poached Maine lobster tails, saffron risotto, sea greens, garlic herb butter draw.",
+    price: 72.00,
+    featured: false,
+    vegetarian: false,
+    spicy: false,
+    rating: 4.9,
+    image: "https://images.unsplash.com/photo-1559742811-82428df76d23?q=80&w=600"
+  },
+  {
+    id: "pasta-1",
+    name: "Wild Mushroom Tagliatelle",
+    category: "pasta",
+    description: "House-made fresh pasta, chanterelle and porcini mushrooms, white truffle cream, shaved pecorino.",
+    price: 38.00,
+    featured: false,
+    vegetarian: true,
+    spicy: false,
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?q=80&w=600"
+  },
+  {
+    id: "pasta-2",
+    name: "Spicy Lobster Linguine",
+    category: "pasta",
+    description: "Fresh lobster claw meat, linguine, spicy san marzano tomato reduction, fresh basil, olive oil.",
+    price: 45.00,
+    featured: false,
+    vegetarian: false,
+    spicy: true,
+    rating: 4.7,
+    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600"
+  },
+  {
+    id: "des-1",
+    name: "Classic Grand Soufflé",
+    category: "desserts",
+    description: "Valrhona dark chocolate soufflé, Tahitian vanilla bean ice cream, hot fudge table drizzle.",
+    price: 18.00,
+    featured: true,
+    vegetarian: true,
+    spicy: false,
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600"
+  },
+  {
+    id: "des-2",
+    name: "Gold-Leaf Panna Cotta",
+    category: "desserts",
+    description: "Madagascar vanilla panna cotta, fresh berries, 24k gold leaf, raspberry gelée.",
+    price: 22.00,
+    featured: false,
+    vegetarian: true,
+    spicy: false,
+    rating: 4.6,
+    image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=600"
+  },
+  {
+    id: "wine-1",
+    name: "Château Margaux 2015",
+    category: "wine",
+    description: "Premier Grand Cru Classé. Complex aromas of black fruits, violets, and sweet cedar wood. Shipped direct.",
+    price: 180.00,
+    featured: true,
+    vegetarian: true,
+    spicy: false,
+    rating: 5.0,
+    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=600"
+  }
+];

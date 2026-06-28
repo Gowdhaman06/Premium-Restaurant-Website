@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="L'Étoile - An exquisite fine dining restaurant experience featuring curated gastronomic journeys, Michelin-star quality courses, and a premium atmosphere.">
+  <meta name="keywords" content="luxury dining, fine dining, Michelin star, premium restaurant, French cuisine, gourmet food, reservations">
+  <meta name="author" content="L'Étoile">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://letoile-dining.com/">
+  <meta property="og:title" content="L'Étoile | Premium Fine Dining Experience">
+  <meta property="og:description" content="Savor the art of fine dining with L'Étoile. Explore our curated menu and reserve your table today.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="L'Étoile | Premium Fine Dining Experience">
+  <meta property="twitter:description" content="Savor the art of fine dining with L'Étoile. Explore our curated menu and reserve your table today.">
+  
+  <title>L'Étoile | Exquisite Fine Dining</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "L'Étoile",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "350 5th Ave",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10118",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.748440,
+      "longitude": -73.985428
+    },
+    "url": "https://letoile-dining.com",
+    "telephone": "+12125550199",
+    "servesCuisine": "Fine Dining, Contemporary",
+    "priceRange": "$$$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "17:00",
+        "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "16:00",
+        "closes": "22:00"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skiplink for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#home" class="brand-logo">L'ÉTOILE</a>
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#reservations" class="nav-link">Reservations</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#reservations" class="btn btn-gold-outline">Book Table</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" aria-hidden="true" role="dialog">
+    <div class="drawer-content">
+      <button class="drawer-close" aria-label="Close Navigation Menu">&times;</button>
+      <div class="drawer-links">
+        <a href="#home" class="drawer-link">Home</a>
+        <a href="#about" class="drawer-link">About</a>
+        <a href="#menu" class="drawer-link">Menu</a>
+        <a href="#gallery" class="drawer-link">Gallery</a>
+        <a href="#reservations" class="drawer-link">Reservations</a>
+        <a href="#contact" class="drawer-link">Contact</a>
+        <a href="#reservations" class="btn btn-gold w-full text-center">Book Table</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Container -->
+  <main id="main-content" tabindex="-1">
+    
+    <!-- ================= HOME VIEW ================= -->
+    <section id="view-home" class="view-section hidden">
+      <!-- Hero -->
+      <div class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-sub animate-fade-in">An Exquisite Gastronomic Journey</p>
+          <h1 class="hero-title animate-fade-in delay-1">Savor the Art of <br><span class="italic-gold">Fine Dining</span></h1>
+          <p class="hero-desc animate-fade-in delay-2">Indulge in a curated symphony of flavor, aroma, and luxurious aesthetics designed by Michelin-star visionaries.</p>
+          <div class="hero-actions animate-fade-in delay-3">
+            <a href="#reservations" class="btn btn-gold">Reserve Table</a>
+            <a href="#menu" class="btn btn-white-outline">Explore Menu</a>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <span class="scroll-text">Scroll</span>
+          <div class="scroll-line">
+            <div class="scroll-dot"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Dishes Section -->
+      <section class="section-padding bg-black-dark">
+        <div class="container text-center">
+          <p class="text-gold uppercase tracking-widest text-xs mb-2">Our Culinary Art</p>
+          <h2 class="section-title mb-12">Signature Masterpieces</h2>
+          <div id="featured-dishes-grid" class="cards-grid animate-on-scroll">
+            <!-- Dynamic Injection of Featured Cards -->
+          </div>
+          <div class="mt-12 animate-on-scroll">
+            <a href="#menu" class="btn btn-gold-outline">View Entire Menu</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chef Spotlight Section -->
+      <section class="section-padding bg-black-light border-y border-white-5">
+        <div class="container grid-two-cols items-center gap-12">
+          <div class="chef-image-wrapper animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800" alt="Chef Jean-Luc Thorne" class="chef-img" loading="lazy">
+            <div class="gold-frame-decor"></div>
+          </div>
+          <div class="chef-info animate-on-scroll">
+            <p class="text-gold uppercase tracking-widest text-xs mb-2">The Culinary Architect</p>
+            <h2 class="section-title text-left mb-6">Chef Jean-Luc Thorne</h2>
+            <p class="text-gray mb-6 leading-relaxed">With over two decades spent spearheading Michelin-star dining across Paris, Tokyo, and New York, Chef Jean-Luc blends precise classic technique with progressive local organic elements.</p>
+            <p class="text-gray italic mb-8">"Food is not simply sustenance; it is a canvas of memories, textures, and sensory dialogues. We strive to craft a masterwork with every single plate."</p>
+            <a href="#about" class="btn btn-gold-outline">Our Story</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Menu Highlights Slider or Preview -->
+      <section class="section-padding bg-black-dark">
+        <div class="container text-center">
+          <p class="text-gold uppercase tracking-widest text-xs mb-2">Sensory Pleasures</p>
+          <h2 class="section-title mb-12">Popular Pairings</h2>
+          <div class="highlights-container animate-on-scroll">
+            <!-- High-fidelity cards injected dynamically -->
+            <div id="popular-highlights" class="cards-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Reviews Carousel -->
+      <section class="section-padding bg-black-light border-t border-white-5">
+        <div class="container">
+          <div class="reviews-carousel-container animate-on-scroll">
+            <div class="reviews-slider">
+              <!-- Dynamically injected reviews -->
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-btn prev-review" aria-label="Previous Review">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="carousel-btn next-review" aria-label="Next Review">
+                <i data-lucide="chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reservation Call To Action Section -->
+      <section class="section-padding bg-black-dark text-center relative overflow-hidden">
+        <div class="cta-parallax-bg bg-cover" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920'); opacity: 0.15; position: absolute; inset:0; z-index: 1;"></div>
+        <div class="container relative z-10 py-12">
+          <h2 class="section-title mb-6">Experience Gastronomy At Its Finest</h2>
+          <p class="text-gray max-w-lg mx-auto mb-8 font-sans">Tables are highly coveted. We recommend securing your reservation at least 14 days in advance to guarantee availability.</p>
+          <a href="#reservations" class="btn btn-gold">Make A Reservation</a>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= ABOUT VIEW ================= -->
+    <section id="view-about" class="view-section hidden">
+      <div class="page-header bg-cover" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1920');">
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content text-center">
+          <p class="text-gold uppercase tracking-widest text-xs mb-2">About L'Étoile</p>
+          <h1 class="page-title">Our Story & Heritage</h1>
+        </div>
+      </div>
+      
+      <!-- Story Timeline Section -->
+      <section class="section-padding bg-black-dark">
+        <div class="container">
+          <div class="grid-two-cols items-center gap-12 mb-16">
+            <div class="animate-on-scroll">
+              <h2 class="section-title text-left mb-6">The Legacy of Taste</h2>
+              <p class="text-gray mb-6">Established in 2018, L'Étoile was founded with the aspiration to create a sensory escape. We sought to decouple fine dining from stuffy traditions, shifting focus purely to culinary genius, warm service, and luxurious contemporary environment.</p>
+              <p class="text-gray">Every ingredient is sourced from sustainable micro-farms, ensuring maximum flavor clarity and supporting local biodiversity. Each dish tells a story of origin, technique, and creative flair.</p>
+            </div>
+            <div class="about-grid-images animate-on-scroll">
+              <img src="https://images.unsplash.com/photo-1428515613728-6b4607e44363?q=80&w=800" alt="Restaurant Interior view" class="about-img mb-6 rounded-sm border border-white-5" loading="lazy">
+            </div>
+          </div>
+          
+          <!-- Timeline Details -->
+          <div class="timeline-container animate-on-scroll">
+            <div class="timeline-item">
+              <div class="timeline-year font-serif">2018</div>
+              <div class="timeline-desc">
+                <h4 class="text-white text-lg mb-2 font-serif">The Opening</h4>
+                <p class="text-gray text-sm">L'Étoile opens its massive mahogany doors in Manhattan's historic district, introducing our signature progressive style.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year font-serif">2020</div>
+              <div class="timeline-desc">
+                <h4 class="text-white text-lg mb-2 font-serif">First Michelin Star</h4>
+                <p class="text-gray text-sm">The culinary world awards our precise techniques and unique botanical flavor profiles our first Michelin Star.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year font-serif">2023</div>
+              <div class="timeline-desc">
+                <h4 class="text-white text-lg mb-2 font-serif">A Second Star & Global Acclaim</h4>
+                <p class="text-gray text-sm">Recognized for our zero-waste sustainability initiatives and continuous boundary-pushing pairings.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= MENU VIEW ================= -->
+    <section id="view-menu" class="view-section hidden">
+      <div class="page-header bg-cover" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1920');">
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content text-center">
+          <p class="text-gold uppercase tracking-widest text-xs mb-2">Gastronomic Selection</p>
+          <h1 class="page-title">Curated Menu</h1>
+        </div>
+      </div>
+
+      <section class="section-padding bg-black-dark">
+        <div class="container">
+          <!-- Search and Filters Container -->
+          <div class="menu-controls mb-8 animate-on-scroll">
+            <div class="search-box">
+              <i data-lucide="search" class="search-icon"></i>
+              <input type="text" id="menu-search-input" placeholder="Search dishes..." aria-label="Search dishes">
+            </div>
+            <div class="sort-box">
+              <label for="menu-sort-select" class="sr-only">Sort Menu</label>
+              <select id="menu-sort-select">
+                <option value="popularity">Popularity</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Dynamic Category Filters -->
+          <div id="menu-filters-wrapper" class="flex-center flex-wrap gap-4 mb-12 animate-on-scroll">
+            <!-- Dynamic Buttons Injected Here -->
+          </div>
+
+          <!-- Grid of Dishes -->
+          <div id="menu-dishes-grid" class="cards-grid min-h-[400px]">
+            <!-- Menu Cards Injected Dynamically -->
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= GALLERY VIEW ================= -->
+    <section id="view-gallery" class="view-section hidden">
+      <div class="page-header bg-cover" style="background-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1920');">
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content text-center">
+          <p class="text-gold uppercase tracking-widest text-xs mb-2">Visual Journeys</p>
+          <h1 class="page-title">Gallery Archive</h1>
+        </div>
+      </div>
+
+      <section class="section-padding bg-black-dark">
+        <div class="container">
+          <!-- Gallery category filters -->
+          <div id="gallery-filters-wrapper" class="flex-center flex-wrap gap-4 mb-12">
+            <button class="filter-pill active" data-category="all">All Photos</button>
+            <button class="filter-pill" data-category="food">Food Art</button>
+            <button class="filter-pill" data-category="interior">Interior Ambiance</button>
+            <button class="filter-pill" data-category="kitchen">Kitchen & Chefs</button>
+          </div>
+
+          <!-- Gallery Pinterest Masonry Grid -->
+          <div id="gallery-masonry" class="gallery-grid">
+            <!-- Dynamically injected images -->
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= RESERVATIONS VIEW ================= -->
+    <section id="view-reservations" class="view-section hidden">
+      <div class="page-header bg-cover" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920');">
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content text-center">
+          <p class="text-gold uppercase tracking-widest text-xs mb-2">Secure A Table</p>
+          <h1 class="page-title">Reservations</h1>
+        </div>
+      </div>
+
+      <section class="section-padding bg-black-dark">
+        <div class="container">
+          <div class="reservation-grid">
+            
+            <div class="reservation-info-card animate-on-scroll">
+              <h3 class="font-serif text-2xl text-gold mb-6">Reservation Guidelines</h3>
+              <p class="text-gray text-sm mb-6 leading-relaxed">To offer an unparalleled dining experience, reservations are strictly managed. Please review our instructions before booking.</p>
+              
+              <ul class="guidelines-list">
+                <li>
+                  <strong>Cancellation Policy</strong>
+                  <span>Cancellations must be made 48 hours in advance. Late cancellations will be subject to a fee of $50 per person.</span>
+                </li>
+                <li>
+                  <strong>Dress Code</strong>
+                  <span>Smart elegant dress code is required. Athletic wear, shorts, and flip-flops are not permitted.</span>
+                </li>
+                <li>
+                  <strong>Children Policy</strong>
+                  <span>We welcome children over the age of 12. Children must order from the standard tasting menu.</span>
+                </li>
+                <li>
+                  <strong>Group Reservations</strong>
+                  <span>For parties larger than 8, please contact our events team at +1 (212) 555-0199.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="reservation-form-container animate-on-scroll">
+              <form id="reservation-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="res-name">Full Name</label>
+                    <input type="text" id="res-name" name="name" required placeholder="e.g. Alexander Thorne">
+                    <span class="error-msg" id="error-res-name"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="res-email">Email Address</label>
+                    <input type="email" id="res-email" name="email" required placeholder="e.g. alex@example.com">
+                    <span class="error-msg" id="error-res-email"></span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="res-phone">Phone Number</label>
+                    <input type="tel" id="res-phone" name="phone" required placeholder="e.g. +91 98765 43210">
+                    <span class="error-msg" id="error-res-phone"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="res-guests">Number of Guests</label>
+                    <input type="number" id="res-guests" name="guests" min="1" max="20" required value="2">
+                    <span class="error-msg" id="error-res-guests"></span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="res-date">Date</label>
+                    <input type="date" id="res-date" name="date" required>
+                    <span class="error-msg" id="error-res-date"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="res-time">Dining Time</label>
+                    <select id="res-time" name="time" required>
+                      <option value="" disabled selected>Select time slot</option>
+                      <option value="17:00">5:00 PM</option>
+                      <option value="17:30">5:30 PM</option>
+                      <option value="18:00">6:00 PM</option>
+                      <option value="18:30">6:30 PM</option>
+                      <option value="19:00">7:00 PM</option>
+                      <option value="19:30">7:30 PM</option>
+                      <option value="20:00">8:00 PM</option>
+                      <option value="20:30">8:30 PM</option>
+                      <option value="21:00">9:00 PM</option>
+                      <option value="21:30">9:30 PM</option>
+                      <option value="22:00">10:00 PM</option>
+                      <option value="22:30">10:30 PM</option>
+                    </select>
+                    <span class="error-msg" id="error-res-time"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="res-notes">Special Requests / Dietary Restrictions</label>
+                  <textarea id="res-notes" name="notes" rows="4" placeholder="Allergies, wheelchair access, anniversary, etc..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-gold w-full text-center" id="res-submit-btn">
+                  <span class="btn-text">Confirm Booking</span>
+                  <div class="loader-spinner hidden"></div>
+                </button>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= CONTACT VIEW ================= -->
+    <section id="view-contact" class="view-section hidden">
+      <div class="page-header bg-cover" style="background-image: url('https://images.unsplash.com/photo-1525648122249-c7ef12e35159?q=80&w=1920');">
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content text-center">
+          <p class="text-gold uppercase tracking-widest text-xs mb-2">Connect With Us</p>
+          <h1 class="page-title">Contact & Location</h1>
+        </div>
+      </div>
+
+      <section class="section-padding bg-black-dark">
+        <div class="container grid-two-cols items-start gap-12">
+          
+          <!-- Contact details & hours -->
+          <div class="contact-details animate-on-scroll">
+            <h3 class="font-serif text-2xl text-gold mb-6">Dining Room</h3>
+            <p class="text-gray mb-8">Feel free to reach out to our concierge for assistance with directions, special bookings, or event inquiries.</p>
+            
+            <div class="contact-item">
+              <i data-lucide="map-pin" class="contact-icon"></i>
+              <div class="contact-text">
+                <h4 class="font-serif text-white">Address</h4>
+                <p class="text-gray text-sm">350 5th Ave, New York, NY 10118, United States</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i data-lucide="phone" class="contact-icon"></i>
+              <div class="contact-text">
+                <h4 class="font-serif text-white">Phone</h4>
+                <p class="text-gray text-sm">+1 (212) 555-0199</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i data-lucide="mail" class="contact-icon"></i>
+              <div class="contact-text">
+                <h4 class="font-serif text-white">Email</h4>
+                <p class="text-gray text-sm">concierge@letoile-dining.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i data-lucide="clock" class="contact-icon"></i>
+              <div class="contact-text">
+                <h4 class="font-serif text-white">Dinner Service Hours</h4>
+                <p class="text-gray text-sm">Mon - Thu: 5:00 PM - 11:00 PM<br>Fri - Sat: 5:00 PM - 12:00 AM<br>Sun: 4:00 PM - 10:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick contact form -->
+          <div class="contact-form-card animate-on-scroll">
+            <h3 class="font-serif text-2xl text-gold mb-6">Send A Message</h3>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" name="name" required placeholder="Full Name">
+                <span class="error-msg" id="error-contact-name"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" required placeholder="Email Address">
+                <span class="error-msg" id="error-contact-email"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="5" required placeholder="Describe your query..."></textarea>
+                <span class="error-msg" id="error-contact-message"></span>
+              </div>
+              <button type="submit" class="btn btn-gold w-full text-center">Send Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Google Maps Embed Container -->
+      <section class="w-full">
+        <iframe
+          title="L'Étoile Fine Dining Location Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617539420083!2d-73.98542848459392!3d40.74844047932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style="border: 0; filter: invert(90%) hue-rotate(180deg) grayscale(100%); display: block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </section>
+
+    <!-- ================= 404 VIEW ================= -->
+    <section id="view-404" class="view-section hidden">
+      <div class="flex-center flex-col h-screen text-center px-6">
+        <h1 class="text-7xl font-serif text-gold mb-4">404</h1>
+        <h2 class="text-2xl font-serif text-white mb-6">Page Not Found</h2>
+        <p class="text-gray max-w-sm mb-8">The gastronomic experience you are looking for has shifted location or does not exist.</p>
+        <a href="#home" class="btn btn-gold">Return to Home</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Brand column -->
+      <div class="footer-col">
+        <h3 class="font-serif text-gold text-2xl tracking-widest mb-4">L'ÉTOILE</h3>
+        <p class="text-gray text-sm leading-relaxed mb-6">Crafting memorable gastronomy and exquisite fine dining experiences for the discerning guest.</p>
+      </div>
+
+      <!-- Hours column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Service Hours</h4>
+        <ul class="footer-links">
+          <li>Dinner: 5:00 PM - 11:00 PM</li>
+          <li>Late Dinner: 5:00 PM - 12:00 AM</li>
+          <li>Sunday: 4:00 PM - 10:00 PM</li>
+        </ul>
+      </div>
+
+      <!-- Location column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Address</h4>
+        <p class="text-gray text-sm leading-relaxed">
+          350 5th Ave, New York,<br>
+          NY 10118, United States
+        </p>
+      </div>
+
+      <!-- Newsletter column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Newsletter</h4>
+        <p class="text-gray text-sm mb-4">Receive notifications on exclusive chef collaboration nights and menu launches.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" required placeholder="Your Email Address" aria-label="Your Email Address">
+          <button type="submit" aria-label="Subscribe to newsletter">Join</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <span class="copyright">&copy; <span id="copyright-year">2026</span> L'ÉTOILE. All Rights Reserved.</span>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook Link"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="Instagram Link"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="Twitter Link"><i data-lucide="twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Overlay Modal -->
+  <div id="gallery-lightbox" class="lightbox hidden" aria-hidden="true" role="dialog">
+    <button class="lightbox-close" aria-label="Close image viewer">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous image"><i data-lucide="chevron-left"></i></button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+    <button class="lightbox-next" aria-label="Next image"><i data-lucide="chevron-right"></i></button>
+  </div>
+
+  <!-- Booking Confirmation Modal Dialog -->
+  <div id="booking-modal" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div class="modal-icon-success">
+        <i data-lucide="check"></i>
+      </div>
+      <h3 class="font-serif text-2xl text-white mb-2">Booking Confirmed</h3>
+      <p class="text-gray text-sm mb-6 text-center leading-relaxed">
+        Your culinary journey is locked. A confirmation receipt, dressing instructions, and address references are on their way to your inbox.
+      </p>
+      <div class="modal-details mb-6 text-left w-full text-xs bg-black-light p-4 border border-white-5 rounded-sm">
+        <div class="flex justify-between py-1">
+          <span class="text-white-40">Reservation Name:</span>
+          <span id="confirm-name" class="text-gold font-semibold"></span>
+        </div>
+        <div class="flex justify-between py-1">
+          <span class="text-white-40">Guests:</span>
+          <span id="confirm-guests" class="text-white"></span>
+        </div>
+        <div class="flex justify-between py-1">
+          <span class="text-white-40">Date & Time:</span>
+          <span id="confirm-date-time" class="text-white"></span>
+        </div>
+      </div>
+      <button class="btn btn-gold w-full text-center" id="close-modal-btn">Exquisite</button>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Trigger Button -->
+  <a href="https://wa.me/919000000000?text=Hello%20L'Etoile,%20I'd%20like%20to%20make%20an%20inquiry%20regarding%20dining%20reservations." target="_blank" rel="noopener noreferrer" class="whatsapp-btn animate-pulse" aria-label="Book on WhatsApp">
+    <i data-lucide="message-square" class="whatsapp-icon"></i>
+    <span class="whatsapp-ping"></span>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <!-- Router and Script Modules -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
